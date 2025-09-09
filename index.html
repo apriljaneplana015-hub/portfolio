@@ -19,6 +19,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Works</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -136,6 +137,21 @@
       </div>
     </div>
   </section>
+<!-- Featured Work -->
+<section id="featured">
+  <div class="container">
+    <h1>Brand Logo</h1>
+    <div class="featured-content">
+      <img src="LOGO.png" alt="Featured Design">
+      <div class="featured-text">
+        <h2>Logo Designs</h2>
+        <p>
+          This logos was crafted to represent simplicity, creativity, and brand identity. I combined modern typography with clean visuals to ensure it’s memorable, versatile, and scalable — perfect for both digital and print use. My goal was to design a mark that not only looks professional but also tells a story about the brand it represents
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section id="portfolio">
   <div class="container">
@@ -183,6 +199,27 @@
     </div>
   </div>
 </section>
+<!-- Resume Section -->
+<!-- Resume Section -->
+<section id="resume">
+  <div class="container">
+    <h1>Resume</h1>
+    <div class="resume-book">
+      <img src="PLANA APRIL RESUMEEE design-1.jpg" alt="Resume Page 1" class="zoomable">
+      <img src="PLANA APRIL RESUMEEE design-2.jpg" alt="Resume Page 2" class="zoomable">
+    </div>
+    <p class="resume-note">
+      Click any page to view it in full size.
+    </p>
+  </div>
+</section>
+
+<!-- Lightbox (hidden until clicked) -->
+<div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Zoomed Resume">
+</div>
+
 
   <!-- Contact -->
 <section id="contact">
@@ -322,6 +359,31 @@
         }
       });
     });
+
+  const zoomableImages = document.querySelectorAll('.zoomable');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('close');
+
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close when clicking outside the image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+
   </script>
 
   <!-- Lightbox Modal -->

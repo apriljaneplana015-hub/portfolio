@@ -476,3 +476,157 @@ section p {
 .lightbox-close:hover {
   transform: scale(1.2);
 }
+/* Make Swiper Carousel Larger */
+.swiper {
+  margin-top: 60px;
+  padding-bottom: 100px; /* more space below */
+}
+
+.portfolio-item {
+  max-width: 500px; /* wider cards */
+  padding: 30px; /* more breathing space inside */
+}
+
+.portfolio-item img,
+.portfolio-item video {
+  border-radius: 20px;
+  max-height: 400px; /* taller visuals */
+  object-fit: cover;
+}
+
+/* Featured Work Section */
+#featured {
+  padding: 120px 50px;
+  background: linear-gradient(135deg, #f9f5f2, #ffffff);
+  text-align: center;
+}
+
+#featured .featured-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+#featured img {
+  width: 100%;           /* make it take full container width */
+  max-width: 800px;      /* limit max width so it doesn’t stretch too much */
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+
+
+#featured img:hover {
+  transform: scale(1.05);
+}
+
+#featured .featured-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+#featured .featured-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+#featured .featured-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Resume Section */
+#resume {
+  padding: 120px 50px;
+  background: #fafafa;
+  text-align: center;
+}
+
+#resume h1 {
+  margin-bottom: 40px;
+}
+
+.resume-book {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resume-book img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.resume-book img:hover {
+  transform: scale(1.05);
+}
+
+.resume-note {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #555;
+}
+/* Resume Section */
+#resume {
+  padding: 120px 50px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.resume-book {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resume-book img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.resume-book img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
